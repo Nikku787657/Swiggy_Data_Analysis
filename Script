@@ -1,0 +1,46 @@
+# Importing required libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load dataset
+# Replace 'swiggy_data.csv' with your file name
+df = pd.read_csv('swiggy_data.csv')
+
+# Data overview
+print("Dataset Overview:")
+print(df.head())
+
+# Checking for missing values
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+# Data cleaning (example: filling missing values)
+df['Delivery_Time'] = df['Delivery_Time'].fillna(df['Delivery_Time'].median())
+
+# Analysis: Most popular cuisines
+popular_cuisines = df['Cuisine'].value_counts()
+print("\nMost Popular Cuisines:")
+print(popular_cuisines)
+
+# Visualization: Peak order times
+plt.figure(figsize=(10, 6))
+sns.histplot(df['Order_Time'], bins=24, kde=True, color='blue')
+plt.title('Peak Order Times')
+plt.xlabel('Time of Day')
+plt.ylabel('Order Frequency')
+plt.grid()
+plt.show()
+
+# Visualization: Cuisine popularity
+plt.figure(figsize=(12, 8))
+sns.barplot(x=popular_cuisines.index, y=popular_cuisines.values, palette='viridis')
+plt.title('Most Popular Cuisines on Swiggy')
+plt.xlabel('Cuisine')
+plt.ylabel('Order Count')
+plt.xticks(rotation=45)
+plt.show()
+
+# Key insights
+average_delivery_time = df['Delivery_Time'].mean()
+print(f"\nAverage Delivery Time: {average_delivery_time} minutes")
