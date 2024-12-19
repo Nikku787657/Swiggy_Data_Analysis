@@ -1,0 +1,25 @@
+2. Open the Jupyter Notebook (`swiggy_analysis.ipynb`) to review the analysis.
+3. View visualizations in the `/Visualizations` folder.
+
+---
+
+### **3. Visualization Images**
+Below are examples of charts you can include in the `/Visualizations` folder:
+
+1. **Peak Order Times Histogram**:  
+![Peak Order Times](https://via.placeholder.com/600x400)  
+*(Histogram showing order frequency by time of day.)*
+
+2. **Cuisine Popularity Bar Chart**:  
+![Cuisine Popularity](https://via.placeholder.com/600x400)  
+*(Bar chart showing the popularity of different cuisines.)*
+
+3. **Average Delivery Time**:  
+![Delivery Time Distribution](https://via.placeholder.com/600x400)  
+*(A line chart or boxplot showing delivery time distribution.)*
+
+---
+
+### **4. Commit the Changes**
+1. Save the analysis as `swiggy_analysis.ipynb` in your local folder.
+2. Organize your files into these folders:
